@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Trainings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 2px)",
+                        sm: "calc(var(--radius) - 4px)",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 222.2 84% 4.9%;
+            --primary: 221.2 83.2% 53.3%;
+            --primary-foreground: 210 40% 98%;
+            --secondary: 210 40% 96%;
+            --secondary-foreground: 222.2 84% 4.9%;
+            --muted: 210 40% 96%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96%;
+            --accent-foreground: 222.2 84% 4.9%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 221.2 83.2% 53.3%;
+            --radius: 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-background font-sans">
+    <!-- Header -->
+    <header class="flex items-center justify-start p-6">
+        <div class="flex items-center space-x-3">
+            <img src="img/logo/logo.png.png" alt="Freelance Trainings Logo" class="h-12 w-auto">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6">
+        <!-- Title Section -->
+        <div class="text-center mb-12">
+            <h1 class="lg:text-4xl text-2xl font-bold text-foreground mb-4 mt-3">
+                Begin Your Journey with Freelance Trainings
+            </h1>
+            <p class="text-lg text-foreground">
+                Choose your path - whether you're looking for talent or opportunities
+            </p>
+        </div>
+
+        <!-- Role Selection Cards -->
+        <div class="flex justify-center items-center flex-col md:flex-row gap-8 max-w-4xl w-full">
+            <!-- Client Card -->
+            <div class="flex-1 max-w-[320px]">
+                <div
+                    class="bg-card border-2 border-[#348CCC] rounded-lg p-4 h-full flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                    <div class="mb-6">
+                        <i data-lucide="briefcase" class="w-16 h-16 text-blue-600 mx-auto"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-card-foreground mb-4">
+                        I'm a client, <br /> looking for expert Trainers
+                    </h2>
+                    <p class="text-[#000000] text-sm font-light mb-8 flex-grow">
+                        Hire verified freelance trainers for your projects
+                    </p>
+                    <button
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors">
+                        Continue as Client
+                    </button>
+                </div>
+            </div>
+
+            <!-- Freelancer Card -->
+            <div class="flex-1 max-w-[320px]">
+                <div
+                    class="bg-[#C8FFF533] border-2 border-[#148572] rounded-lg p-4 h-full flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+                    <div class="mb-6">
+                        <i data-lucide="laptop" class="w-16 h-16 text-[#118772] mx-auto"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-card-foreground mb-4">
+                        I'm a freelancer, <br /> ready to showcase my skills
+                    </h2>
+                    <p class="text-[#000000] text-sm font-light mb-8 flex-grow ">
+                        Get discovered, hired, and grow your training career
+                    </p>
+                    <button
+                        class="w-full bg-[#118772] hover:bg-green-800 text-white font-medium py-3 px-6 rounded-md transition-colors">
+                        Continue as Freelancer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Link -->
+    <footer class="flex justify-center pt-8 pb-8">
+        <p class="text-muted-foreground">
+            Already have an account?
+            <a href="#" class="text-primary hover:underline font-medium">Login</a>
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
