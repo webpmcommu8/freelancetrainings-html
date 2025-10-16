@@ -7,7 +7,9 @@
     <title>Freelance Trainings</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,6 +18,7 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        poppins: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
                     },
                 },
             },
@@ -23,8 +26,13 @@
     </script>
     <style>
         @keyframes slide-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
@@ -50,12 +58,16 @@
             <!-- Actions -->
             <div class="hidden md:flex items-center gap-4">
                 <a href="#" class="text-gray-700 hover:text-gray-900">Log In</a>
-                <a href="#" class="inline-flex items-center rounded-full bg-[#4EB7E8] hover:bg-[#37a7dc] text-white px-5 py-2">Sign Up</a>
+                <a href="#"
+                    class="inline-flex items-center rounded-full bg-[#4EB7E8] hover:bg-[#37a7dc] text-white px-5 py-2">Sign
+                    Up</a>
             </div>
 
             <!-- Mobile menu button -->
-            <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button id="mobileMenuBtn"
+                class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
@@ -71,7 +83,8 @@
                 <a href="#" class="block">Demo Content Download</a>
                 <div class="pt-2 flex items-center gap-4">
                     <a href="#" class="text-gray-700">Log In</a>
-                    <a href="#" class="inline-flex items-center rounded-full bg-[#4EB7E8] text-white px-5 py-2">Sign Up</a>
+                    <a href="#" class="inline-flex items-center rounded-full bg-[#4EB7E8] text-white px-5 py-2">Sign
+                        Up</a>
                 </div>
             </nav>
         </div>
@@ -85,110 +98,128 @@
     </section>
 
     <!-- Browse by Category Section -->
-    <section class="max-w-7xl mx-auto px-6 py-12">
+    <section class="max-w-7xl mx-auto px-6 py-16 mt-6 font-poppins">
         <div class="mb-6">
-            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#0C3865]">Browse talent by category</h2>
-            <p class="mt-3 text-lg text-gray-600">Looking for work? <a href="#" class="text-[#1e73be] hover:underline">Browse jobs</a></p>
+            <h2 class="text-3xl md:text-4xl font-normal tracking-tight text-[#013B82]">Browse talent by category</h2>
+            <p class="mt-3 text-lg font-normal text-[#647981]">Looking for work? <a href="#"
+                    class="text-[#3DB5E8] hover:underline">Browse jobs</a></p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             <!-- Card 1 - highlighted -->
-            <a href="#" class="block rounded-2xl border-2 border-[#1e73be] bg-[#EAF5FF] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
-                <h3 class="text-2xl font-semibold text-[#0C3865]">Development & IT</h3>
-                <div class="flex items-center gap-2 mt-4 text-gray-700">
-                    <i data-lucide="star" class="w-5 h-5 text-[#1e73be]"></i>
-                    <span class="font-medium">4.85/5</span>
+            <a href="#"
+                class="block rounded-lg border-2 border-[#3DB5E8] bg-[#F2F5F6] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
+                <h3 class="text-2xl font-normal text-[#013B82]">Development & IT</h3>
+                <div class="flex items-start gap-2 mt-4">
+                    <i data-lucide="star" class="w-5 h-5 text-[#3DB5E8] fill-current relative"></i>
+                    <span class="font-medium text-[#647981]">4.85/5</span>
                 </div>
             </a>
 
             <!-- Card 2 -->
-            <a href="#" class="block rounded-2xl border border-gray-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:border-[#1e73be] transition min-h-[140px]">
-                <h3 class="text-2xl font-semibold text-[#0C3865]">Graphic Design &<br class="hidden md:block"/> Creative Stuff</h3>
-                <div class="flex items-center gap-2 mt-4 text-gray-700">
-                    <i data-lucide="star" class="w-5 h-5 text-[#1e73be]"></i>
-                    <span class="font-medium">4.91/5</span>
+            <a href="#"
+                class="block rounded-lg border-2 hover:border-[#3DB5E8] bg-[#F2F5F6] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
+                <h3 class="text-2xl font-normal text-[#013B82]">Graphic Design &<br class="hidden md:block" />
+                    Creative Stuff</h3>
+                <div class="flex items-start gap-2 mt-4">
+                    <i data-lucide="star" class="w-5 h-5 text-[#3DB5E8] fill-current relative"></i>
+                    <span class="font-medium text-[#647981]">4.91/5</span>
                 </div>
             </a>
 
             <!-- Card 3 -->
-            <a href="#" class="block rounded-2xl border border-gray-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:border-[#1e73be] transition min-h-[140px]">
-                <h3 class="text-2xl font-semibold text-[#0C3865]">Sales & Marketing</h3>
-                <div class="flex items-center gap-2 mt-4 text-gray-700">
-                    <i data-lucide="star" class="w-5 h-5 text-[#1e73be]"></i>
-                    <span class="font-medium">4.77/5</span>
+            <a href="#"
+                class="block rounded-lg border-2 hover:border-[#3DB5E8] bg-[#F2F5F6] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
+                <h3 class="text-2xl font-normal text-[#013B82]">Sales & Marketing</h3>
+                <div class="flex items-start gap-2 mt-4">
+                    <i data-lucide="star" class="w-5 h-5 text-[#3DB5E8] fill-current relative"></i>
+                    <span class="font-medium text-[#647981]">4.77/5</span>
                 </div>
             </a>
 
             <!-- Card 4 -->
-            <a href="#" class="block rounded-2xl border border-gray-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:border-[#1e73be] transition min-h-[140px]">
-                <h3 class="text-2xl font-semibold text-[#0C3865]">Copy Writing &<br class="hidden md:block"/> Translation</h3>
-                <div class="flex items-center gap-2 mt-4 text-gray-700">
-                    <i data-lucide="star" class="w-5 h-5 text-[#1e73be]"></i>
-                    <span class="font-medium">4.92/5</span>
+            <a href="#"
+                class="block rounded-lg border-2 hover:border-[#3DB5E8] bg-[#F2F5F6] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
+                <h3 class="text-2xl font-normal text-[#013B82]">Copy Writing &<br class="hidden md:block" />
+                    Translation</h3>
+                <div class="flex items-start gap-2 mt-4">
+                    <i data-lucide="star" class="w-5 h-5 text-[#3DB5E8] fill-current relative"></i>
+                    <span class="font-medium text-[#647981]">4.92/5</span>
                 </div>
             </a>
 
             <!-- Card 5 -->
-            <a href="#" class="block rounded-2xl border border-gray-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:border-[#1e73be] transition min-h-[140px]">
-                <h3 class="text-2xl font-semibold text-[#0C3865]">Admin & Customer<br class="hidden md:block"/> Support</h3>
-                <div class="flex items-center gap-2 mt-4 text-gray-700">
-                    <i data-lucide="star" class="w-5 h-5 text-[#1e73be]"></i>
-                    <span class="font-medium">4.66/5</span>
+            <a href="#"
+                class="block rounded-lg border-2 hover:border-[#3DB5E8] bg-[#F2F5F6] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
+                <h3 class="text-2xl font-normal text-[#013B82]">Admin & Customer<br class="hidden md:block" /> Support
+                </h3>
+                <div class="flex items-start gap-2 mt-4">
+                    <i data-lucide="star" class="w-5 h-5 text-[#3DB5E8] fill-current relative"></i>
+                    <span class="font-medium text-[#647981]">4.66/5</span>
                 </div>
             </a>
 
             <!-- Card 6 -->
-            <a href="#" class="block rounded-2xl border border-gray-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:border-[#1e73be] transition min-h-[140px]">
-                <h3 class="text-2xl font-semibold text-[#0C3865]">Finance &<br class="hidden md:block"/> Accounting</h3>
-                <div class="flex items-center gap-2 mt-4 text-gray-700">
-                    <i data-lucide="star" class="w-5 h-5 text-[#1e73be]"></i>
-                    <span class="font-medium">4.77/5</span>
+            <a href="#"
+                class="block rounded-lg border-2 hover:border-[#3DB5E8] bg-[#F2F5F6] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
+                <h3 class="text-2xl font-normal text-[#013B82]">Finance &<br class="hidden md:block" /> Accounting
+                </h3>
+                <div class="flex items-start gap-2 mt-4">
+                    <i data-lucide="star" class="w-5 h-5 text-[#3DB5E8] fill-current relative"></i>
+                    <span class="font-medium text-[#647981]">4.77/5</span>
                 </div>
             </a>
 
             <!-- Card 7 -->
-            <a href="#" class="block rounded-2xl border border-gray-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:border-[#1e73be] transition min-h-[140px]">
-                <h3 class="text-2xl font-semibold text-[#0C3865]">Engineer &<br class="hidden md:block"/> Architecture</h3>
-                <div class="flex items-center gap-2 mt-4 text-gray-700">
-                    <i data-lucide="star" class="w-5 h-5 text-[#1e73be]"></i>
-                    <span class="font-medium">4.13/5</span>
+            <a href="#"
+                class="block rounded-lg border-2 hover:border-[#3DB5E8] bg-[#F2F5F6] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
+                <h3 class="text-2xl font-normal text-[#013B82]">Engineer &<br class="hidden md:block" /> Architecture
+                </h3>
+                <div class="flex items-start gap-2 mt-4">
+                    <i data-lucide="star" class="w-5 h-5 text-[#3DB5E8] fill-current relative"></i>
+                    <span class="font-medium text-[#647981]">4.13/5</span>
                 </div>
             </a>
 
             <!-- Card 8 -->
-            <a href="#" class="block rounded-2xl border border-gray-200 bg-slate-50 p-6 shadow-sm hover:shadow-md hover:border-[#1e73be] transition min-h-[140px]">
-                <h3 class="text-2xl font-semibold text-[#0C3865]">Legal</h3>
-                <div class="flex items-center gap-2 mt-4 text-gray-700">
-                    <i data-lucide="star" class="w-5 h-5 text-[#1e73be]"></i>
-                    <span class="font-medium">4.85/5</span>
+            <a href="#"
+                class="block rounded-lg border-2 hover:border-[#3DB5E8] bg-[#F2F5F6] p-6 shadow-sm hover:shadow-md transition min-h-[140px]">
+                <h3 class="text-2xl font-normal text-[#013B82]">Legal</h3>
+                <div class="flex items-start gap-2 mt-4">
+                    <i data-lucide="star" class="w-5 h-5 text-[#3DB5E8] fill-current relative"></i>
+                    <span class="font-medium text-[#647981]">4.85/5</span>
                 </div>
             </a>
         </div>
     </section>
 
     <!-- Featured Trainers Section -->
-    <section class="max-w-7xl mx-auto px-6 pb-12">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-[#0C3865] mb-8">Featured Trainers</h2>
+    <section class="max-w-7xl mx-auto px-6 pb-12 pt-6">
+        <!-- <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-[#0C3865] mb-8">Featured Trainers</h2> -->
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
             <!-- Card Template -->
             <div class="group">
-                <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                <div class="flex flex-col items-center">
+                    <div class="rounded-xl overflow-hidden border-2 border-transparent ring-1 ring-white/10">
+                        <img src="/img/1.png" alt="Trainer" class="w-full h-[186px] w-[186px] object-cover" />
+                    </div>
+                    <div class="w-[80%] mx-auto h-2 rounded-b-2xl z-10 bg-[#E9E9E9]"></div>
+                    
                 </div>
-                <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
-                    <h3 class="text-lg font-semibold text-gray-900">Mr.Marwah</h3>
-                    <p class="text-gray-600 text-sm">Corporate Trainer</p>
-                    <div class="flex items-center gap-2 text-gray-700 mt-2">
-                        <i data-lucide="star" class="w-4 h-4 text-[#1e73be]"></i>
-                        <span class="text-sm">4.8 on avg.</span>
+                <div class="bg-white/5 mt-4 ml-2">
+                    <h3 class="text-[15px] font-medium text-[#181818]">Mr.Marwah</h3>
+                    <p class="text-[#181818] font-medium opacity-70 text-[13px] mt-3">Corporate Trainer</p>
+                    <div class="flex items-start gap-2 text-[#181818] opacity-70 font-medium mt-3">
+                        <i data-lucide="star" class="w-4 h-4 text-[#181818] fill-current relative"></i>
+                        <span class="text-[13px] ">4.8 on avg.</span>
                     </div>
                 </div>
             </div>
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/2.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Mr.Pawar</h3>
@@ -202,7 +233,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/3.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Mr.Soni</h3>
@@ -216,7 +247,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/4.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Mr.Chatterjee</h3>
@@ -230,7 +261,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/5.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Mr.Acharya</h3>
@@ -244,7 +275,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/6.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Mr.Joshi</h3>
@@ -258,7 +289,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/7.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Ms.Jasani Kumar</h3>
@@ -272,7 +303,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/8.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Mr.Goel</h3>
@@ -286,7 +317,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/9.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Mr.Gajera</h3>
@@ -300,7 +331,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/10.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Ms.Mannan</h3>
@@ -314,7 +345,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/11.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Mr.Verma</h3>
@@ -328,7 +359,7 @@
 
             <div class="group">
                 <div class="rounded-2xl overflow-hidden shadow-md ring-1 ring-white/10">
-                    <img src="/img/user.png" alt="Trainer" class="w-full h-56 object-cover" />
+                    <img src="/img/12.png" alt="Trainer" class="w-full h-56 object-cover" />
                 </div>
                 <div class="bg-white/5 rounded-xl -mt-4 mx-3 p-4">
                     <h3 class="text-lg font-semibold text-gray-900">Ms.Gautam</h3>
@@ -346,10 +377,11 @@
     <section class="">
         <div class="max-w-7xl mx-auto px-6 py-16">
             <!-- Row 1: 3 items -->
-            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#38a8e3]/40 border border-[#38a8e3]/40 rounded-2xl overflow-hidden">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#38a8e3]/40 border border-[#38a8e3]/40 rounded-2xl overflow-hidden">
                 <div class="p-8 text-center">
                     <div class="text-5xl md:text-7xl font-bold text-[#4EB7E8]">10,000+</div>
-                    <p class="mt-4 text-xl">Registered Trainers &<br class="hidden md:block"/> L&D Professionals</p>
+                    <p class="mt-4 text-xl">Registered Trainers &<br class="hidden md:block" /> L&D Professionals</p>
                 </div>
                 <div class="p-8 text-center">
                     <div class="text-5xl md:text-7xl font-bold text-[#4EB7E8]">100+</div>
@@ -357,19 +389,20 @@
                 </div>
                 <div class="p-8 text-center">
                     <div class="text-5xl md:text-7xl font-bold text-[#4EB7E8]">50+</div>
-                    <p class="mt-4 text-xl">Corporates &<br class="hidden md:block"/> Training Agencies</p>
+                    <p class="mt-4 text-xl">Corporates &<br class="hidden md:block" /> Training Agencies</p>
                 </div>
             </div>
 
             <!-- Row 2: 2 items -->
-            <div class="grid grid-cols-1 md:grid-cols-2 mt-6 divide-y md:divide-y-0 md:divide-x divide-[#38a8e3]/40 border border-[#38a8e3]/40 rounded-2xl overflow-hidden">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 mt-6 divide-y md:divide-y-0 md:divide-x divide-[#38a8e3]/40 border border-[#38a8e3]/40 rounded-2xl overflow-hidden">
                 <div class="p-8 text-center">
                     <div class="text-5xl md:text-7xl font-bold text-[#4EB7E8]">150+</div>
-                    <p class="mt-4 text-xl">Editable Training<br class="hidden md:block"/> Materials</p>
+                    <p class="mt-4 text-xl">Editable Training<br class="hidden md:block" /> Materials</p>
                 </div>
                 <div class="p-8 text-center">
                     <div class="text-5xl md:text-7xl font-bold text-[#4EB7E8]">3 Step</div>
-                    <p class="mt-4 text-xl">Robust<br class="hidden md:block"/> Empanelment Process</p>
+                    <p class="mt-4 text-xl">Robust<br class="hidden md:block" /> Empanelment Process</p>
                 </div>
             </div>
         </div>
@@ -380,31 +413,50 @@
         <div class="max-w-7xl mx-auto px-0 py-10">
             <div class="relative overflow-hidden">
                 <!-- Gradient fades -->
-                <div class="pointer-events-none absolute left-0 top-0 h-full w-10 md:w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
-                <div class="pointer-events-none absolute right-0 top-0 h-full w-10 md:w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+                <div
+                    class="pointer-events-none absolute left-0 top-0 h-full w-10 md:w-24 bg-gradient-to-r from-white to-transparent z-10">
+                </div>
+                <div
+                    class="pointer-events-none absolute right-0 top-0 h-full w-10 md:w-24 bg-gradient-to-l from-white to-transparent z-10">
+                </div>
 
                 <!-- Track -->
-                <div class="flex items-center gap-16 md:gap-24 whitespace-nowrap" style="animation: slide-scroll 25s linear infinite;">
+                <div class="flex items-center gap-16 md:gap-24 whitespace-nowrap"
+                    style="animation: slide-scroll 25s linear infinite;">
                     <!-- Duplicate the set twice for seamless loop -->
                     <div class="flex items-center gap-16 md:gap-24">
                         <img src="/img/logo/logo.png.png" alt="Logo 1" class="h-14 md:h-16 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Assa_Abloy_logo.svg" alt="Assa Abloy" class="h-8 md:h-10 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Hester_Biosciences_Logo.png" alt="Hester" class="h-10 md:h-12 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/IIFL_Finance_logo.svg" alt="IIFL" class="h-8 md:h-10 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Central_Bank_of_India_logo.svg" alt="Central Bank of India" class="h-10 md:h-12 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Essar_Group_logo.svg" alt="Essar" class="h-8 md:h-10 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Fincare_Small_Finance_Bank_logo.png" alt="Fincare" class="h-8 md:h-10 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Kohler_logo.svg" alt="Kohler" class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Assa_Abloy_logo.svg"
+                            alt="Assa Abloy" class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Hester_Biosciences_Logo.png"
+                            alt="Hester" class="h-10 md:h-12 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/IIFL_Finance_logo.svg" alt="IIFL"
+                            class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Central_Bank_of_India_logo.svg"
+                            alt="Central Bank of India" class="h-10 md:h-12 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Essar_Group_logo.svg" alt="Essar"
+                            class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Fincare_Small_Finance_Bank_logo.png"
+                            alt="Fincare" class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Kohler_logo.svg" alt="Kohler"
+                            class="h-8 md:h-10 object-contain">
                     </div>
                     <div class="flex items-center gap-16 md:gap-24">
                         <img src="/img/logo/logo.png.png" alt="Logo 1" class="h-14 md:h-16 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Assa_Abloy_logo.svg" alt="Assa Abloy" class="h-8 md:h-10 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Hester_Biosciences_Logo.png" alt="Hester" class="h-10 md:h-12 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/IIFL_Finance_logo.svg" alt="IIFL" class="h-8 md:h-10 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Central_Bank_of_India_logo.svg" alt="Central Bank of India" class="h-10 md:h-12 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Essar_Group_logo.svg" alt="Essar" class="h-8 md:h-10 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Fincare_Small_Finance_Bank_logo.png" alt="Fincare" class="h-8 md:h-10 object-contain">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Kohler_logo.svg" alt="Kohler" class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Assa_Abloy_logo.svg"
+                            alt="Assa Abloy" class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Hester_Biosciences_Logo.png"
+                            alt="Hester" class="h-10 md:h-12 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/IIFL_Finance_logo.svg" alt="IIFL"
+                            class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Central_Bank_of_India_logo.svg"
+                            alt="Central Bank of India" class="h-10 md:h-12 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Essar_Group_logo.svg" alt="Essar"
+                            class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Fincare_Small_Finance_Bank_logo.png"
+                            alt="Fincare" class="h-8 md:h-10 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Kohler_logo.svg" alt="Kohler"
+                            class="h-8 md:h-10 object-contain">
                     </div>
                 </div>
             </div>
@@ -415,7 +467,8 @@
     <section class="max-w-7xl mx-auto px-6 pt-4 pb-12" id="how-it-works">
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#0C3865] mb-6">How it works</h2>
         <div class="rounded-[32px] bg-[#14293C] text-white px-6 md:px-12 py-10 md:py-16">
-            <h3 class="text-2xl md:text-4xl font-semibold leading-tight max-w-4xl">How can FreelanceTrainings empower your organization?</h3>
+            <h3 class="text-2xl md:text-4xl font-semibold leading-tight max-w-4xl">How can FreelanceTrainings empower
+                your organization?</h3>
             <p class="text-2xl md:text-4xl font-semibold leading-tight max-w-4xl">&nbsp;</p>
             <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
                 <!-- Step 1 -->
@@ -473,14 +526,16 @@
 
     <!-- Premium Training Material -->
     <section class="max-w-7xl mx-auto px-6 pb-16" id="premium-materials">
-        <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#0C3865]">Access our Premium Training Material</h2>
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#0C3865]">Access our Premium Training Material
+        </h2>
         <p class="mt-2 text-lg text-gray-600">Have a look at our Bite-Sized / Full day workshops</p>
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- material card -->
             <article class="rounded-2xl overflow-hidden bg-white shadow-sm ring-1 ring-gray-200">
                 <img src="/img/school-scaled.png" alt="Workplace Communication" class="w-full h-44 object-cover" />
                 <div class="p-5">
-                    <div class="text-sm text-gray-500 flex items-center gap-2"><i data-lucide="crown" class="w-4 h-4 text-[#f59e0b]"></i> Premium</div>
+                    <div class="text-sm text-gray-500 flex items-center gap-2"><i data-lucide="crown"
+                            class="w-4 h-4 text-[#f59e0b]"></i> Premium</div>
                     <h3 class="mt-2 text-xl font-semibold text-gray-900">Workplace Communication</h3>
                     <div class="mt-1 text-gray-600">1 Day Workshop</div>
                     <div class="mt-3 flex items-baseline gap-3">
@@ -493,7 +548,8 @@
             <article class="rounded-2xl overflow-hidden bg-white shadow-sm ring-1 ring-gray-200">
                 <img src="/img/laptop.png" alt="First Time Manager" class="w-full h-44 object-cover" />
                 <div class="p-5">
-                    <div class="text-sm text-gray-500 flex items-center gap-2"><i data-lucide="crown" class="w-4 h-4 text-[#f59e0b]"></i> Premium</div>
+                    <div class="text-sm text-gray-500 flex items-center gap-2"><i data-lucide="crown"
+                            class="w-4 h-4 text-[#f59e0b]"></i> Premium</div>
                     <h3 class="mt-2 text-xl font-semibold text-gray-900">First Time Manager</h3>
                     <div class="mt-1 text-gray-600">2 Days Workshop</div>
                     <div class="mt-3 flex items-baseline gap-3">
@@ -506,7 +562,8 @@
             <article class="rounded-2xl overflow-hidden bg-white shadow-sm ring-1 ring-gray-200">
                 <img src="/img/bag.png" alt="Customer Service" class="w-full h-44 object-cover" />
                 <div class="p-5">
-                    <div class="text-sm text-gray-500 flex items-center gap-2"><i data-lucide="crown" class="w-4 h-4 text-[#f59e0b]"></i> Premium</div>
+                    <div class="text-sm text-gray-500 flex items-center gap-2"><i data-lucide="crown"
+                            class="w-4 h-4 text-[#f59e0b]"></i> Premium</div>
                     <h3 class="mt-2 text-xl font-semibold text-gray-900">Customer Service</h3>
                     <div class="mt-1 text-gray-600">1 Day Workshop</div>
                     <div class="mt-3 flex items-baseline gap-3">
@@ -519,7 +576,8 @@
             <article class="rounded-2xl overflow-hidden bg-white shadow-sm ring-1 ring-gray-200">
                 <img src="/img/hero.jpg" alt="Selling Skills" class="w-full h-44 object-cover" />
                 <div class="p-5">
-                    <div class="text-sm text-gray-500 flex items-center gap-2"><i data-lucide="crown" class="w-4 h-4 text-[#f59e0b]"></i> Premium</div>
+                    <div class="text-sm text-gray-500 flex items-center gap-2"><i data-lucide="crown"
+                            class="w-4 h-4 text-[#f59e0b]"></i> Premium</div>
                     <h3 class="mt-2 text-xl font-semibold text-gray-900">Selling Skills</h3>
                     <div class="mt-1 text-gray-600">2 Days Workshop</div>
                     <div class="mt-3 flex items-baseline gap-3">
@@ -531,107 +589,144 @@
             </article>
         </div>
         <div class="mt-6 flex justify-center">
-            <a href="#" class="inline-flex items-center rounded-xl bg-[#38a8e3] hover:bg-[#2298d9] text-white px-6 py-3 font-semibold">View All Training Materials</a>
+            <a href="#"
+                class="inline-flex items-center rounded-xl bg-[#38a8e3] hover:bg-[#2298d9] text-white px-6 py-3 font-semibold">View
+                All Training Materials</a>
         </div>
     </section>
 
-        <!-- Testimonials -->
-        <section class="max-w-7xl mx-auto px-6 pb-12" id="testimonials">
-            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#0C3865] mb-8">Real results from clients & Trainers</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card -->
-                <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
-                    <div class="text-xs font-semibold tracking-widest text-gray-500">DEV & IT</div>
-                    <p class="mt-4 text-gray-800 leading-relaxed">"Haris came in and helped us transfer knowledge from our departing developer, meeting a serious deadline, without fail. His knowledge and experience are exceptional."</p>
-                    <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <div class="mt-6 flex items-center justify-between">
-                        <div>
-                            <div class="text-sm text-gray-600">Work done by Haris S.</div>
-                            <div class="text-xs text-gray-500">Full-Stack Developer · Apr 7, 2025</div>
-                        </div>
-                        <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+    <!-- Testimonials -->
+    <section class="max-w-7xl mx-auto px-6 pb-12" id="testimonials">
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#0C3865] mb-8">Real results from clients &
+            Trainers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card -->
+            <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
+                <div class="text-xs font-semibold tracking-widest text-gray-500">DEV & IT</div>
+                <p class="mt-4 text-gray-800 leading-relaxed">"Haris came in and helped us transfer knowledge from our
+                    departing developer, meeting a serious deadline, without fail. His knowledge and experience are
+                    exceptional."</p>
+                <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                        class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                <div class="mt-6 flex items-center justify-between">
+                    <div>
+                        <div class="text-sm text-gray-600">Work done by Haris S.</div>
+                        <div class="text-xs text-gray-500">Full-Stack Developer · Apr 7, 2025</div>
                     </div>
-                </article>
-                <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
-                    <div class="text-xs font-semibold tracking-widest text-gray-500">DESIGN & CREATIVE</div>
-                    <p class="mt-4 text-gray-800 leading-relaxed">"Ezzan did an amazing job editing my videos — fast turnaround, great attention to detail, and very easy to work with. Highly recommend him!"</p>
-                    <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <div class="mt-6 flex items-center justify-between">
-                        <div>
-                            <div class="text-sm text-gray-600">Work done by Ezzan S.</div>
-                            <div class="text-xs text-gray-500">Video Editor · Mar 14, 2025</div>
-                        </div>
-                        <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                    <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                </div>
+            </article>
+            <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
+                <div class="text-xs font-semibold tracking-widest text-gray-500">DESIGN & CREATIVE</div>
+                <p class="mt-4 text-gray-800 leading-relaxed">"Ezzan did an amazing job editing my videos — fast
+                    turnaround, great attention to detail, and very easy to work with. Highly recommend him!"</p>
+                <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                        class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                <div class="mt-6 flex items-center justify-between">
+                    <div>
+                        <div class="text-sm text-gray-600">Work done by Ezzan S.</div>
+                        <div class="text-xs text-gray-500">Video Editor · Mar 14, 2025</div>
                     </div>
-                </article>
-                <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
-                    <div class="text-xs font-semibold tracking-widest text-gray-500">AI SERVICES</div>
-                    <p class="mt-4 text-gray-800 leading-relaxed">"Rick is a fantastic AI/ML engineer with specialization in LLMs, delivering end‑to‑end solutions. He delivered a working solution. Looking forward to working with him again."</p>
-                    <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <div class="mt-6 flex items-center justify-between">
-                        <div>
-                            <div class="text-sm text-gray-600">Work done by Richard C.</div>
-                            <div class="text-xs text-gray-500">LLM/RAG · Mar 28, 2025</div>
-                        </div>
-                        <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                    <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                </div>
+            </article>
+            <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
+                <div class="text-xs font-semibold tracking-widest text-gray-500">AI SERVICES</div>
+                <p class="mt-4 text-gray-800 leading-relaxed">"Rick is a fantastic AI/ML engineer with specialization in
+                    LLMs, delivering end‑to‑end solutions. He delivered a working solution. Looking forward to working
+                    with him again."</p>
+                <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                        class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                <div class="mt-6 flex items-center justify-between">
+                    <div>
+                        <div class="text-sm text-gray-600">Work done by Richard C.</div>
+                        <div class="text-xs text-gray-500">LLM/RAG · Mar 28, 2025</div>
                     </div>
-                </article>
-                <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
-                    <div class="text-xs font-semibold tracking-widest text-gray-500">SALES & MARKETING</div>
-                    <p class="mt-4 text-gray-800 leading-relaxed">"We loved working with Jibran and his team. Very professional, responsive, and thoughtful about how to approach each project. We will definitely work with them again."</p>
-                    <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <div class="mt-6 flex items-center justify-between">
-                        <div>
-                            <div class="text-sm text-gray-600">Work done by Jibran Z.</div>
-                            <div class="text-xs text-gray-500">Social Media · Mar 10, 2025</div>
-                        </div>
-                        <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                    <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                </div>
+            </article>
+            <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
+                <div class="text-xs font-semibold tracking-widest text-gray-500">SALES & MARKETING</div>
+                <p class="mt-4 text-gray-800 leading-relaxed">"We loved working with Jibran and his team. Very
+                    professional, responsive, and thoughtful about how to approach each project. We will definitely work
+                    with them again."</p>
+                <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                        class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                <div class="mt-6 flex items-center justify-between">
+                    <div>
+                        <div class="text-sm text-gray-600">Work done by Jibran Z.</div>
+                        <div class="text-xs text-gray-500">Social Media · Mar 10, 2025</div>
                     </div>
-                </article>
-                <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
-                    <div class="text-xs font-semibold tracking-widest text-gray-500">WRITING & TRANSLATION</div>
-                    <p class="mt-4 text-gray-800 leading-relaxed">"Michael is very skilled and highly professional. Understood the assignment and delivered creative copy that stayed on brand. Would definitely hire him again!"</p>
-                    <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <div class="mt-6 flex items-center justify-between">
-                        <div>
-                            <div class="text-sm text-gray-600">Work done by Michael L.</div>
-                            <div class="text-xs text-gray-500">Email Series · Jan 31, 2025</div>
-                        </div>
-                        <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                    <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                </div>
+            </article>
+            <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
+                <div class="text-xs font-semibold tracking-widest text-gray-500">WRITING & TRANSLATION</div>
+                <p class="mt-4 text-gray-800 leading-relaxed">"Michael is very skilled and highly professional.
+                    Understood the assignment and delivered creative copy that stayed on brand. Would definitely hire
+                    him again!"</p>
+                <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                        class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                <div class="mt-6 flex items-center justify-between">
+                    <div>
+                        <div class="text-sm text-gray-600">Work done by Michael L.</div>
+                        <div class="text-xs text-gray-500">Email Series · Jan 31, 2025</div>
                     </div>
-                </article>
-                <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
-                    <div class="text-xs font-semibold tracking-widest text-gray-500">ADMIN & CUSTOMER SUPPORT</div>
-                    <p class="mt-4 text-gray-800 leading-relaxed">"Ahmed was a great asset to our team. Applied process rigor and configured ClickUp to ensure sustainable usage. His insights had a lasting impact on our workflows."</p>
-                    <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <div class="mt-6 flex items-center justify-between">
-                        <div>
-                            <div class="text-sm text-gray-600">Work done by Ahmed A.</div>
-                            <div class="text-xs text-gray-500">TPM · Feb 5, 2025</div>
-                        </div>
-                        <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                    <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                </div>
+            </article>
+            <article class="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-6">
+                <div class="text-xs font-semibold tracking-widest text-gray-500">ADMIN & CUSTOMER SUPPORT</div>
+                <p class="mt-4 text-gray-800 leading-relaxed">"Ahmed was a great asset to our team. Applied process
+                    rigor and configured ClickUp to ensure sustainable usage. His insights had a lasting impact on our
+                    workflows."</p>
+                <div class="mt-4 text-[#f59e0b] flex gap-1"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                        class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                        data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                <div class="mt-6 flex items-center justify-between">
+                    <div>
+                        <div class="text-sm text-gray-600">Work done by Ahmed A.</div>
+                        <div class="text-xs text-gray-500">TPM · Feb 5, 2025</div>
                     </div>
-                </article>
-            </div>
-        </section>
-    
-        <!-- CTA Banner -->
-        <section class="max-w-7xl mx-auto px-6 pb-12">
-            <div class="relative rounded-[32px] bg-[#0F6B9A] text-white overflow-hidden px-6 md:px-12 py-10 md:py-16">
-                <div class="absolute -left-6 -bottom-10 w-56 h-56 rounded-full border-8 border-white/10"></div>
-                <div class="absolute -right-10 -top-10 w-72 h-72 rounded-full border-8 border-white/10"></div>
-                <h3 class="relative text-3xl md:text-5xl font-semibold leading-tight max-w-5xl">Find Your Next Hire For A Short Task Or Long-Term Growth</h3>
-                <form class="relative mt-8">
-                    <div class="flex gap-3 items-stretch bg-white rounded-full p-2 md:p-3 w-full md:max-w-3xl">
-                        <input type="email" placeholder="Enter Your Email Here..." class="flex-1 bg-transparent px-4 md:px-6 text-gray-700 placeholder-gray-400 outline-none" />
-                        <button type="submit" class="shrink-0 inline-flex items-center gap-2 rounded-full bg-[#E9F4FF] text-[#0F6B9A] px-4 md:px-6 py-2 md:py-3 font-semibold">
-                            <span>Search Job</span>
-                            <span class="inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#0F6B9A] text-white"><i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
+                    <img src="/img/user.png" class="w-10 h-10 rounded-full object-cover" alt="avatar" />
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="max-w-7xl mx-auto px-6 pb-12">
+        <div class="relative rounded-[32px] bg-[#0F6B9A] text-white overflow-hidden px-6 md:px-12 py-10 md:py-16">
+            <div class="absolute -left-6 -bottom-10 w-56 h-56 rounded-full border-8 border-white/10"></div>
+            <div class="absolute -right-10 -top-10 w-72 h-72 rounded-full border-8 border-white/10"></div>
+            <h3 class="relative text-3xl md:text-5xl font-semibold leading-tight max-w-5xl">Find Your Next Hire For A
+                Short Task Or Long-Term Growth</h3>
+            <form class="relative mt-8">
+                <div class="flex gap-3 items-stretch bg-white rounded-full p-2 md:p-3 w-full md:max-w-3xl">
+                    <input type="email" placeholder="Enter Your Email Here..."
+                        class="flex-1 bg-transparent px-4 md:px-6 text-gray-700 placeholder-gray-400 outline-none" />
+                    <button type="submit"
+                        class="shrink-0 inline-flex items-center gap-2 rounded-full bg-[#E9F4FF] text-[#0F6B9A] px-4 md:px-6 py-2 md:py-3 font-semibold">
+                        <span>Search Job</span>
+                        <span
+                            class="inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#0F6B9A] text-white"><i
+                                data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-[#0F6B9A] text-white mt-12">
@@ -644,10 +739,14 @@
                         Connecting skilled trainers with quality clients across India.
                     </p>
                     <div class="flex items-center gap-4 mt-4">
-                        <a href="#" aria-label="Facebook" class="hover:text-white/90"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" aria-label="Twitter" class="hover:text-white/90"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                        <a href="#" aria-label="LinkedIn" class="hover:text-white/90"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                        <a href="#" aria-label="Instagram" class="hover:text-white/90"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Facebook" class="hover:text-white/90"><i data-lucide="facebook"
+                                class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Twitter" class="hover:text-white/90"><i data-lucide="twitter"
+                                class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="hover:text-white/90"><i data-lucide="linkedin"
+                                class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Instagram" class="hover:text-white/90"><i data-lucide="instagram"
+                                class="w-5 h-5"></i></a>
                     </div>
                 </div>
 
@@ -679,9 +778,14 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
                     <ul class="space-y-3 text-white/90">
-                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 mt-0.5"></i><span>406, Titanium City Center Mall,<br/> Anandanagar Ahmedabad - 15</span></li>
-                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5"></i><a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a></li>
-                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5"></i><a href="mailto:hello@freelancetrainings.com" class="hover:underline">hello@freelancetrainings.com</a></li>
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin"
+                                class="w-5 h-5 mt-0.5"></i><span>406, Titanium City Center Mall,<br /> Anandanagar
+                                Ahmedabad - 15</span></li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5"></i><a
+                                href="tel:+919876543210" class="hover:underline">+91 98765 43210</a></li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5"></i><a
+                                href="mailto:hello@freelancetrainings.com"
+                                class="hover:underline">hello@freelancetrainings.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -701,7 +805,7 @@
         </div>
     </footer>
 
-    
+
 
     <script>
         // Initialize Lucide icons (if you add any icons later)
@@ -718,4 +822,3 @@
 </body>
 
 </html>
-
