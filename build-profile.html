@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,91 +91,160 @@
   </header>
 
   <!-- Main Section -->
-  <main class="flex flex-col lg:flex-row justify-center items-start flex-grow px-6 lg:px-20 py-10 gap-16">
+  <main class="flex flex-col lg:flex-row justify-center items-center flex-grow px-6 pb-20 pt-1 gap-16">
 
     <!-- Left Card -->
-   <div class="border border-[#1e73be] rounded-xl p-8 text-center max-w-sm w-full bg-white shadow-sm">
-  <h2 class="text-2xl font-semibold mb-2 text-gray-900">Welcome, Jane</h2>
-  <p class="text-gray-600 mb-6 text-base">
-    Ready to showcase your training expertise?
-  </p>
+    <div class="border border-[#1e73be] rounded-xl p-8 text-center max-w-sm w-full bg-white shadow-sm">
+      <h2 class="text-2xl font-semibold mb-2 text-gray-900">Welcome, {Name...}</h2>
+      <p class="text-gray-600 mb-6 text-base">
+        Ready to showcase your training expertise?
+      </p>
 
-  <div class="flex justify-center mb-6">
-    <img src="//img/school-scaled.png" alt="Training Illustration" class="h-40 w-auto object-contain" />
-  </div>
+      <div class="flex justify-center mb-6">
+        <img src="/img/school-scaled.png" alt="Training Illustration" class="h-40 w-auto object-contain" />
+      </div>
 
-  <button class="bg-[#1e73be] hover:bg-[#155a91] text-white font-medium px-6 py-3 rounded-md w-full transition">
-    Let's Build Your Profile
-  </button>
+      <button class="bg-[#1e73be] hover:bg-[#155a91] text-white font-medium px-6 py-3 rounded-md w-full transition">
+        Let's Build Your Profile
+      </button>
 
-  <p class="text-sm text-gray-500 mt-4">
-    Join India's fastest-growing L&D marketplace
-  </p>
-</div>
+      <p class="text-sm text-gray-500 mt-4">
+        Join India's fastest-growing L&D marketplace
+      </p>
+    </div>
 
 
     <!-- Right Info Section -->
-   <div class="flex flex-col divide-y divide-gray-200 max-w-lg w-full">
-  <div class="flex items-center gap-4 py-5">
-    <i data-lucide="user" class="text-[#1e73be] w-5 h-5"></i>
-    <p class="text-gray-700 text-base">Build your professional Influence with Digital Portfolio</p>
-  </div>
+    <div class="flex flex-col divide-y divide-gray-200 max-w-lg w-full">
+      <div class="flex items-center gap-4 py-5">
+        <i data-lucide="user" class="text-[#1e73be] w-5 h-5"></i>
+        <p class="text-gray-700 text-base">Build your professional Influence with Digital Portfolio</p>
+      </div>
 
-  <div class="flex items-center gap-4 py-5">
-    <i data-lucide="briefcase" class="text-[#1e73be] w-5 h-5"></i>
-    <p class="text-gray-700 text-base">Apply to Freelance Training Opportunities/ Projects</p>
-  </div>
+      <div class="flex items-center gap-4 py-5">
+        <i data-lucide="briefcase" class="text-[#1e73be] w-5 h-5"></i>
+        <p class="text-gray-700 text-base">Apply to Freelance Training Opportunities/ Projects</p>
+      </div>
 
-  <div class="flex items-center gap-4 py-5">
-    <i data-lucide="file-text" class="text-[#1e73be] w-5 h-5"></i>
-    <p class="text-gray-700 text-base">Access Editable Training Materials for your workshop</p>
-  </div>
+      <div class="flex items-center gap-4 py-5">
+        <i data-lucide="file-text" class="text-[#1e73be] w-5 h-5"></i>
+        <p class="text-gray-700 text-base">Access Editable Training Materials for your workshop</p>
+      </div>
 
-  <div class="flex items-center gap-4 py-5">
-    <i data-lucide="layers" class="text-[#1e73be] w-5 h-5"></i>
-    <p class="text-gray-700 text-base">Build & Sell your own Training Materials</p>
-  </div>
+      <div class="flex items-center gap-4 py-5">
+        <i data-lucide="layers" class="text-[#1e73be] w-5 h-5"></i>
+        <p class="text-gray-700 text-base">Build & Sell your own Training Materials</p>
+      </div>
 
-  <div class="flex items-center gap-4 py-5">
-    <i data-lucide="shield-check" class="text-[#1e73be] w-5 h-5"></i>
-    <p class="text-gray-700 text-base">Get paid securely and rely on our support when needed.</p>
-  </div>
+      <div class="flex items-center gap-4 py-5">
+        <i data-lucide="shield-check" class="text-[#1e73be] w-5 h-5"></i>
+        <p class="text-gray-700 text-base">Get paid securely and rely on our support when needed.</p>
+      </div>
 
-  <div class="flex items-center gap-4 py-5">
-    <i data-lucide="network" class="text-[#1e73be] w-5 h-5"></i>
-    <p class="text-gray-700 text-base">Learn, Network & Grow</p>
-  </div>
-</div>
+      <div class="flex items-center gap-4 py-5">
+        <i data-lucide="network" class="text-[#1e73be] w-5 h-5"></i>
+        <p class="text-gray-700 text-base">Learn, Network & Grow</p>
+      </div>
+    </div>
 
 
 
   </main>
 
   <!-- Fixed Bottom Corner Bar -->
-  <div
-    class="fixed bottom-4 right-4 bg-card  rounded-lg px-4 py-3 flex flex-col sm:flex-row items-center gap-3  z-50"
-  >
+  <div class="fixed bottom-0 right-0 bg-card  rounded-lg px-4 py-3 flex flex-col sm:flex-row items-center gap-3  z-50">
     <div class="flex flex-col sm:flex-row sm:items-center gap-3 text-center sm:text-left">
-      <p class="text-sm text-muted-foreground whitespace-nowrap">
-        Upload your Profile / Resume
-      </p>
-      <div class="flex gap-2">
-        <button
-          class="bg-primary hover:bg-blue-700 text-primary-foreground px-4 py-2 rounded-md text-sm transition"
-        >
-          Let's Build Your Profile
-        </button>
-        <button
-          class="bg-primary/90 hover:bg-blue-700 text-primary-foreground px-4 py-2 rounded-md text-sm transition"
-        >
-          Next
-        </button>
+     
+
+      <!-- Upload control -->
+      <div class="flex items-center gap-2">
+        <input id="cvInput" type="file" accept=".pdf,.doc,.docx,.rtf" class="sr-only" />
+        <label for="cvInput" class="group cursor-pointer inline-flex items-center gap-2 bg-transparent text-gray-800 px-4 py-3 rounded-md text-sm transition border border-dashed border-blue-400 hover:border-blue-500 hover:bg-gray-50 hover:shadow-sm">
+          <i data-lucide="upload" class="w-4 h-4 transition-colors group-hover:text-[#1e73be]"></i>
+          <span>Upload your Profile / Resume</span>
+        </label>
+        <!-- Preview chip appears here after selection -->
+        <div id="cvPreview" class="hidden"></div>
       </div>
+
+      <button id="nextBtn" class="bg-primary/90 hover:bg-blue-700 text-primary-foreground px-4 py-3 rounded-md text-sm transition">
+        Skip
+      </button>
+
     </div>
   </div>
 
   <script>
     lucide.createIcons();
+
+    // CV upload preview and delete
+    (function () {
+      const fileInput = document.getElementById('cvInput');
+      const previewContainer = document.getElementById('cvPreview');
+      const nextBtn = document.getElementById('nextBtn');
+      const uploadLabel = document.querySelector('label[for="cvInput"]');
+
+      if (!fileInput || !previewContainer) return;
+
+      function clearPreview() {
+        previewContainer.innerHTML = '';
+        previewContainer.classList.add('hidden');
+        fileInput.value = '';
+        if (uploadLabel) uploadLabel.classList.remove('hidden');
+        if (nextBtn) nextBtn.textContent = 'Skip';
+      }
+
+      fileInput.addEventListener('change', function () {
+        const file = fileInput.files && fileInput.files[0];
+        if (!file) {
+          clearPreview();
+          return;
+        }
+
+        const fileName = file.name;
+
+        // Build chip
+        const chip = document.createElement('div');
+        chip.className = 'flex items-center gap-2 bg-accent text-accent-foreground px-4 py-3 rounded-md text-sm max-w-xs';
+
+        const icon = document.createElement('i');
+        icon.setAttribute('data-lucide', 'file-text');
+        icon.className = 'w-4 h-4 text-[#1e73be]';
+
+        const nameEl = document.createElement('span');
+        nameEl.className = 'truncate';
+        nameEl.title = fileName;
+        nameEl.textContent = fileName;
+
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.className = 'ml-1 inline-flex items-center justify-center rounded hover:bg-gray-200 p-1';
+        removeBtn.setAttribute('aria-label', 'Remove file');
+
+        const removeIcon = document.createElement('i');
+        removeIcon.setAttribute('data-lucide', 'x');
+        removeIcon.className = 'w-4 h-4 text-gray-600';
+        removeBtn.appendChild(removeIcon);
+
+        removeBtn.addEventListener('click', clearPreview);
+
+        chip.appendChild(icon);
+        chip.appendChild(nameEl);
+        chip.appendChild(removeBtn);
+
+        previewContainer.innerHTML = '';
+        previewContainer.appendChild(chip);
+        previewContainer.classList.remove('hidden');
+        if (uploadLabel) uploadLabel.classList.add('hidden');
+        if (nextBtn) nextBtn.textContent = 'Next';
+
+        // Render newly added icons
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons({});
+        }
+      });
+    })();
   </script>
 </body>
+
 </html>
