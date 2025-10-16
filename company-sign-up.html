@@ -45,97 +45,296 @@
       <p class="text-gray-600 text-sm">Create your company account to get started</p>
     </div>
 
-    <!-- Sign Up Form -->
-    <form class="w-full max-w-sm space-y-4">
-      <!-- Username -->
-      <div class="relative flex items-center">
-  <i data-lucide="user" class="absolute left-3 text-gray-400 w-5 h-5"></i>
-  <input type="text" placeholder="Username" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
-</div>
+    <!-- Sign Up Form (3-step) -->
+    <form class="w-full max-w-sm space-y-4" id="signupForm">
+      <!-- Step 1: Title & Name, Phone & Email -->
+      <div id="step1" class="space-y-4">
+        <div class="flex flex-col md:flex-row gap-3">
+          <!-- Title Select -->
+          <div class="relative md:w-1/3 w-full">
+            <select id="title" class="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none appearance-none bg-white" required>
+              <option value="" disabled selected>Title</option>
+              <option value="Mr">Mr</option>
+              <option value="Ms">Ms</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Dr">Dr</option>
+              <option value="Prof">Prof</option>
+            </select>
+            <i data-lucide="chevron-down" class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+          </div>
 
-<!-- Email -->
-<div class="relative flex items-center">
-  <i data-lucide="mail" class="absolute left-3 text-gray-400 w-5 h-5"></i>
-  <input type="email" placeholder="Email" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
-</div>
+          <!-- Full Name -->
+          <div class="relative flex items-center md:w-2/3 w-full">
+            <i data-lucide="user" class="absolute left-3 text-gray-400 w-5 h-5"></i>
+            <input id="fullName" type="text" placeholder="Full name" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
+          </div>
+        </div>
 
-<!-- Password -->
-<div class="relative flex items-center">
-  <i data-lucide="lock" class="absolute left-3 text-gray-400 w-5 h-5"></i>
-  <input id="password" type="password" placeholder="Password" class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
-  <button type="button" id="togglePassword" class="absolute right-3 text-gray-400 focus:outline-none">
-    <i data-lucide="eye-off" id="eyeIcon" class="w-5 h-5 cursor-pointer"></i>
-  </button>
-</div>
+        <!-- Phone -->
+        <div class="relative flex items-center">
+          <i data-lucide="phone" class="absolute left-3 text-gray-400 w-5 h-5"></i>
+          <input id="phone" type="tel" placeholder="Phone" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
+        </div>
 
-      <!-- Password Note -->
-      <p class="text-xs text-gray-500">Your password must have at least 8 characters</p>
+        <!-- Email -->
+        <div class="relative flex items-center">
+          <i data-lucide="mail" class="absolute left-3 text-gray-400 w-5 h-5"></i>
+          <input id="email" type="email" placeholder="Email" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
+        </div>
 
-      <!-- Terms and Conditions -->
-      <div class="flex items-start space-x-2 text-sm text-gray-600">
-        <input type="checkbox" class="mt-1 w-4 h-4 text-primary border-gray-300 rounded" required />
-        <p>
-          By creating an account, you agree to our 
-          <a href="#" class="text-primary hover:underline">Terms & Conditions</a> 
-          and 
-          <a href="#" class="text-primary hover:underline">Privacy Policy</a>.
-        </p>
+        <!-- Next Button -->
+        <button type="button" id="nextBtn1" class="w-full bg-primary hover:bg-[#155a91] text-white font-medium py-2.5 rounded-md transition">Next</button>
       </div>
 
-      <!-- Sign Up Button -->
-      <button type="submit" class="w-full bg-primary hover:bg-[#155a91] text-white font-medium py-2.5 rounded-md transition">
-        Sign Up
-      </button>
+      <!-- Step 2: Organisation details -->
+      <div id="step2" class="space-y-4 hidden">
+        <!-- Organisation -->
+        <div class="relative flex items-center">
+          <i data-lucide="building-2" class="absolute left-3 text-gray-400 w-5 h-5"></i>
+          <input id="organisation" type="text" placeholder="Organisation" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
+        </div>
 
-      <!-- Divider -->
-      <div class="flex items-center my-4">
-        <div class="flex-grow h-px bg-gray-200"></div>
-        <span class="text-gray-400 text-sm px-3">Or sign up with</span>
-        <div class="flex-grow h-px bg-gray-200"></div>
+        <!-- Designation -->
+        <div class="relative flex items-center">
+          <i data-lucide="id-card" class="absolute left-3 text-gray-400 w-5 h-5"></i>
+          <input id="designation" type="text" placeholder="Designation" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
+        </div>
+
+        <!-- City & State Selects -->
+        <div class="flex flex-col md:flex-row gap-3">
+          <div class="relative md:w-1/2 w-full">
+            <select id="city" class="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none appearance-none bg-white" required>
+              <option value="" disabled selected>City</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Chennai">Chennai</option>
+            </select>
+            <i data-lucide="chevron-down" class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+          </div>
+          <div class="relative md:w-1/2 w-full">
+            <select id="state" class="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none appearance-none bg-white" required>
+              <option value="" disabled selected>State</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+            </select>
+            <i data-lucide="chevron-down" class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+          </div>
+        </div>
+
+        <button type="button" id="nextBtn2" class="w-full bg-primary hover:bg-[#155a91] text-white font-medium py-2.5 rounded-md transition">Next</button>
       </div>
 
-      <!-- Social Buttons -->
-      <div class="flex justify-center gap-4">
-        <!-- Google -->
-        <button type="button" class="flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-md w-1/2 hover:bg-gray-50">
-          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" />
-          <span class="text-sm font-medium text-gray-700">Google</span>
+      <!-- Step 3: Password + Submit -->
+      <div id="step3" class="space-y-4 hidden">
+        <!-- Password -->
+        <div class="relative flex items-center">
+          <i data-lucide="lock" class="absolute left-3 text-gray-400 w-5 h-5"></i>
+          <input id="password" type="password" placeholder="Password" class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
+          <button type="button" id="togglePassword" class="absolute right-3 text-gray-400 focus:outline-none">
+            <i data-lucide="eye-off" id="eyeIcon" class="w-5 h-5 cursor-pointer"></i>
+          </button>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="relative flex items-center">
+          <i data-lucide="lock" class="absolute left-3 text-gray-400 w-5 h-5"></i>
+          <input id="confirmPassword" type="password" placeholder="Confirm password" class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:outline-none" required />
+          <button type="button" id="toggleConfirmPassword" class="absolute right-3 text-gray-400 focus:outline-none">
+            <i data-lucide="eye-off" id="eyeIconConfirm" class="w-5 h-5 cursor-pointer"></i>
+          </button>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="flex items-start space-x-2 text-sm text-gray-600">
+          <input id="terms" type="checkbox" class="mt-1 w-4 h-4 text-primary border-gray-300 rounded" required />
+          <p>
+            By creating an account, you agree to our 
+            <a href="#" class="text-primary hover:underline">Terms & Conditions</a> 
+            and 
+            <a href="#" class="text-primary hover:underline">Privacy Policy</a>.
+          </p>
+        </div>
+
+        <!-- Actions -->
+        <button type="submit" class="w-full bg-primary hover:bg-[#155a91] text-white font-medium py-2.5 rounded-md transition">Sign Up</button>
+
+      </div>
+
+      <div id="socialSection">
+        <!-- Divider -->
+        <div class="flex items-center my-4">
+          <div class="flex-grow h-px bg-gray-200"></div>
+          <span class="text-gray-400 text-sm px-3">Or sign up with</span>
+          <div class="flex-grow h-px bg-gray-200"></div>
+        </div>
+
+        <!-- Social Buttons -->
+        <div class="flex justify-center gap-4 my-4">
+          <!-- Google -->
+          <button type="button" class="flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-md w-1/2 hover:bg-gray-50">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" />
+            <span class="text-sm font-medium text-gray-700">Google</span>
+          </button>
+
+          <!-- Microsoft -->
+          <button type="button" class="flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-md w-1/2 hover:bg-gray-50">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="w-20 h-auto" />
+            <span class="text-sm font-medium text-gray-700">Microsoft</span>
+          </button>
+        </div>
+
+        <!-- LinkedIn -->
+        <button type="button" class="flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-md w-full hover:bg-gray-50">
+          <img src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
+          <span class="text-sm font-medium text-gray-700">LinkedIn</span>
         </button>
-
-        <!-- Microsoft -->
-        <button type="button" class="flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-md w-1/2 hover:bg-gray-50">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="w-20 h-auto" />
-          <span class="text-sm font-medium text-gray-700">Microsoft</span>
-        </button>
       </div>
-
-      <!-- LinkedIn -->
-      <button type="button" class="flex items-center justify-center gap-2 border border-gray-300 px-4 py-2 rounded-md w-full hover:bg-gray-50">
-        <img src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
-        <span class="text-sm font-medium text-gray-700">LinkedIn</span>
-      </button>
     </form>
 
     <!-- Sign In Link -->
     <p class="text-gray-600 text-sm mt-6">
       Already have an account? 
-      <a href="login.html" class="text-primary hover:underline font-medium">Sign In</a>
+      <a href="company-login.html" class="text-primary hover:underline font-medium">Sign In</a>
     </p>
   </div>
 
   <script>
   lucide.createIcons();
 
-  // Toggle password visibility
+  // Elements
+  const form = document.getElementById("signupForm");
+  const step1 = document.getElementById("step1");
+  const step2 = document.getElementById("step2");
+  const step3 = document.getElementById("step3");
+  const nextBtn1 = document.getElementById("nextBtn1");
+  const nextBtn2 = document.getElementById("nextBtn2");
+  const socialSection = document.getElementById("socialSection");
+
+  const title = document.getElementById("title");
+  const fullName = document.getElementById("fullName");
+  const phone = document.getElementById("phone");
+  const email = document.getElementById("email");
+
+  const organisation = document.getElementById("organisation");
+  const designation = document.getElementById("designation");
+  const city = document.getElementById("city");
+  const state = document.getElementById("state");
+
+  // Password toggles
   const passwordInput = document.getElementById("password");
   const togglePassword = document.getElementById("togglePassword");
   const eyeIcon = document.getElementById("eyeIcon");
+  const confirmPasswordInput = document.getElementById("confirmPassword");
+  const toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
+  const eyeIconConfirm = document.getElementById("eyeIconConfirm");
 
-  togglePassword.addEventListener("click", () => {
-    const isHidden = passwordInput.type === "password";
-    passwordInput.type = isHidden ? "text" : "password";
-    eyeIcon.setAttribute("data-lucide", isHidden ? "eye" : "eye-off");
-    lucide.createIcons(); // refresh icon
+  if (togglePassword) {
+    togglePassword.addEventListener("click", () => {
+      const isHidden = passwordInput.type === "password";
+      passwordInput.type = isHidden ? "text" : "password";
+      eyeIcon.setAttribute("data-lucide", isHidden ? "eye" : "eye-off");
+      lucide.createIcons();
+    });
+  }
+  if (toggleConfirmPassword) {
+    toggleConfirmPassword.addEventListener("click", () => {
+      const isHidden = confirmPasswordInput.type === "password";
+      confirmPasswordInput.type = isHidden ? "text" : "password";
+      eyeIconConfirm.setAttribute("data-lucide", isHidden ? "eye" : "eye-off");
+      lucide.createIcons();
+    });
+  }
+
+  function showStep(step) {
+    if (step === 1) {
+      step1.classList.remove("hidden");
+      step2.classList.add("hidden");
+      step3.classList.add("hidden");
+      if (socialSection) socialSection.classList.remove("hidden");
+    } else if (step === 2) {
+      step1.classList.add("hidden");
+      step2.classList.remove("hidden");
+      step3.classList.add("hidden");
+      if (socialSection) socialSection.classList.add("hidden");
+    } else {
+      step1.classList.add("hidden");
+      step2.classList.add("hidden");
+      step3.classList.remove("hidden");
+      if (socialSection) socialSection.classList.add("hidden");
+    }
+    lucide.createIcons();
+  }
+
+  function validateStep1() {
+    if (!title.value) return false;
+    if (!fullName.value.trim()) return false;
+    if (!phone.value.trim()) return false;
+    if (!email.validity.valid) return false;
+    return true;
+  }
+
+  function validateStep2() {
+    if (!organisation.value.trim()) return false;
+    if (!designation.value.trim()) return false;
+    if (!city.value) return false;
+    if (!state.value) return false;
+    return true;
+  }
+
+  if (nextBtn1) {
+    nextBtn1.addEventListener("click", () => {
+      if (!validateStep1()) {
+        [title, fullName, phone, email].forEach((el) => el.reportValidity());
+        return;
+      }
+      showStep(2);
+    });
+  }
+
+  if (nextBtn2) {
+    nextBtn2.addEventListener("click", () => {
+      if (!validateStep2()) {
+        [organisation, designation, city, state].forEach((el) => el.reportValidity && el.reportValidity());
+        return;
+      }
+      showStep(3);
+    });
+  }
+
+  // No back buttons per requirements
+
+  // Submission guard to enforce steps and password rules
+  form.addEventListener("submit", (e) => {
+    if (!step2.classList.contains("hidden")) {
+      e.preventDefault();
+      if (!validateStep2()) {
+        [organisation, designation, city, state].forEach((el) => el.reportValidity && el.reportValidity());
+        return;
+      }
+      showStep(3);
+      return;
+    }
+    if (!step3.classList.contains("hidden")) {
+      if (!passwordInput.value || passwordInput.value.length < 8) {
+        e.preventDefault();
+        passwordInput.setCustomValidity("Password must be at least 8 characters");
+        passwordInput.reportValidity();
+        passwordInput.setCustomValidity("");
+        return;
+      }
+      if (passwordInput.value !== confirmPasswordInput.value) {
+        e.preventDefault();
+        confirmPasswordInput.setCustomValidity("Passwords do not match");
+        confirmPasswordInput.reportValidity();
+        confirmPasswordInput.setCustomValidity("");
+        return;
+      }
+    }
   });
 </script>
 </body>
